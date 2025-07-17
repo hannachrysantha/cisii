@@ -1,176 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-  <title>Happy Birthday!!! :)</title>
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <!-- My Style -->
-  <link rel="stylesheet" href="./style/main.css" />
-</head>
+  <title>Selamat Ulang Tahun 🎉</title>
 
+  <!-- CSS langsung di-embed -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    p {
+      font-size: 1.2em;
+      animation: fadeInUp 1.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      opacity: 0.8;
+      animation: fall 3s infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
 <body>
 
-    <audio class="song" loop autoplay>
-        <source src="./music/hbd.mpeg">
-        </source>
-        Your browser isn't invited for super fun audio time.
-    </audio>
+  <h1>Selamat Ulang Tahun! 🎂</h1>
+  <p>Semoga harimu menyenangkan dan penuh kebahagiaan 💖</p>
 
-    <div class="container">
-        <div class="one">
-            <h1 class="one">
-                Hi
-                <span id="name">Chelsea Dwi Nathania</span>
-            </h1>
-            <p class="two" id="greetingText">ini dari koko mu, Vincent.. (rela relain belajar ngoding awkoawkoak)</p>
-        </div>
+  <!-- Tambahan efek konfeti -->
+  <script>
+    const confettiCount = 100;
+    for (let i = 0; i < confettiCount; i++) {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.animationDelay = Math.random() * 3 + "s";
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
+      document.body.appendChild(confetti);
+    }
+  </script>
 
-        <div class="three">
-            <p>it's your birthday!! :D</p>
-        </div>
-
-        <div class="four">
-            <div class="text-box">
-                <p class="hbd-chatbox">
-                HAPPY BIRTHDAY CISIKU YANG RESMI JADI DEWASA !!!
-Puji Tuhan kamu bisaa di titikk inii semua karnaa kebaikan Tuhan yaaa sayangggg!!
-IT'S GONNA BE A FANTASTIC YEARS OLD karnaa kamu diumur yang baru ini kamu akann memasuki dunia perkuliahan which is its really different dari sebelumnyaaaa
-
-______
-
-BUT I STRONGLY BELIEVE THAT OUR GOD NEVER LET U DOWN, NEVER LET U DOIN' IT ALONE!! Dia selaluuu adaa kapanpun dan dimanapun cisiku beradaaa
-__________
-selalu mintaa pertolongann Tuhan yaa sayanggg, apapun yang kamuu hadapi di umur yang baru inii, percayaa kalau semuaa adaa maksud yang Tuhan Yesus percayakan buat kamuuu..
-__________________________
-kokoo bersyukurr bangettt Tuhan kasih kokoo kesempatan buat nemenin kamu di tahun iniii. semogaa di usia 18 ini, kamuu makinn sayang sama Tuhan, dan makin sayang sama kokoo (kalau bisa 200% ya). kokooo percayaaa bangett Tuhan punya rencanaa luar biasaaa buat kamuuuuu. tapi… sebelum kamu jadi wanita suksess dan superr hebattt, jangan lupa tetap jadi cisiii yang kokoo kenal yaaa
-__________________________
-Yeremia 29:11 (TB)
-   "Sebab Aku ini mengetahui rancangan-rancangan apa yang ada pada-Ku mengenai kamu, demikianlah firman TUHAN, yaitu rancangan damai sejahtera dan bukan rancangan kecelakaan, untuk memberikan kepadamu hari depan yang penuh harapan."
-  Tuhann udaaa siapkannnnnn masa depan cerah buat kamuuuuuuu, dan kokoo berdoa kokoo bisa jadi bagian dari rencana indah itu bareng kamuuu🥊🥊🏅🏅👍🏼👍🏼🤏🏼
-__________________________
-kalauu kamu senyum pas baca inii, berarti kokoo berhasil bikin kamu salting. kalauu kamu senyum senyumm malu, berarti kamu makin cantikk. kalau kamu screenshot dan simpann, berarti kamu sayang kokoo
-__________________________
-LASTTTT, HAPPY BIRTHDAY!!
-                </p>
-                <p class="fake-btn">Send</p>
-            </div>
-        </div>
-
-        <div class="five">
-            <p class="idea-1">That's what I was going to do.</p>
-            <p class="idea-2">But then I stopped.</p>
-            <p class="idea-3">
-                I realised, I wanted to do something<br>
-                <strong>special</strong>
-                .
-            </p>
-            <p class="idea-4">Because,</p>
-            <p class="idea-5">
-                You are Special, sayangggg
-                <span>:)</span>
-            </p>
-            <p class="idea-6">
-                <span>S</span>
-                <span>O</span>
-            </p>
-        </div>
-
-        <div class="six">
-            <img src="./img/chelsea.png" alt="profile" class="profile-picture" id="imagePath"/>
-            <img src="img/hat.svg" alt="hat" class="hat" />
-            <div class="wish">
-                <h3 class="wish-hbd">happy birthdayy sayanggggggg!!</h3>
-                <h5 id="wishText">Jesus blesses u n i love uuu ;)</h5>
-            </div>
-        </div>
-
-        <div class="seven">
-            <div class="baloons">
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon2.svg" alt="" />
-                <img src="img/ballon1.svg" alt="" />
-                <img src="img/ballon3.svg" alt="" />
-            </div>
-        </div>
-
-        <div class="eight">
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-        </div>
-
-        <div class="nine">
-            <p>okaayyy, now come back and tell me if you liked it yaaaaa.</p>
-            <p id="replay">or click, if you want to watch it againnn rawrrrr.</p>
-            <p class="last-smile">:)</p>
-        </div>
-    </div>
-
+  <!-- Musik ulang tahun -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
 </body>
-    <!-- Greensock -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <!-- Sweetalert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="application/javascript" src="./script/main.js"></script>
-
 </html>
